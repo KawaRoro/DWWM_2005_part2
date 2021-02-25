@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ajax</title>
+        <link rel="stylesheet" href="/css/main.css">
+        <script src="/js/MyCars.js"></script>
+        <script src="/js/ApiCars.js"></script>
+        <script src="/js/main.js" defer></script>
+    </head>
+    <body>
+        <h1>Ajax</h1>
+        <main>
+            <button id="btnLoad">Charger les données</button> 
+            <input id="search" type="search" placeholder="Rechercher">
+            <select id="orderby">
+                <option value="0">Tri</option>
+                <option value="1">Poids [ASC]</option>
+                <option value="2">Poids [DESC]</option>
+                <option value="3">Année</option>
+                <option value="4">Pays</option>
+            </select>
+
+            <hr>
+
+            <form id="frmCriterias">
+                <select id="brands">
+                    <option value="0">Marque</option>
+                </select>
+                <input id="weightRange" type="range" name="range" min="1" max="100">
+                <button type="submit">Appliquer les filtres</button>
+            </form>
+
+
+            <!-- le tbody ci-dessous sera le container de notre application JS-->
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Poids</th>
+                        <th>Pays d'origine</th>
+                    </tr>
+                </thead>
+                <tbody id="log">
+
+                </tbody>
+            </table>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+{
+    "name": "md/autoloading",
+    "description": "ma description",
+    "type": "project",
+    "authors": [
+        {
+            "name": "MDevoldere",
+            "email": "mdevoldere@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "smarty/smarty": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "MD\\": "MD/"
+        }
+    }
+}

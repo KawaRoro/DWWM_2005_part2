@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    width: 960px;
+    margin: 1em auto;
+}
+
+fieldset {
+    border-radius: 5px;
+    border: 2px solid #111;
+}
+
+legend {
+    text-transform: uppercase;
+}
+
+form div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1em;
+}
+
+label, input, textarea {
+    display: inline-block;
+    width: 300px;
+    border-radius: 5px;
+}
+
+input {
+    padding: 2px;
+    border: 2px solid blue;
+}
+
+input[type="checkbox"], 
+input[type="radio"] {
+    width: auto;
+}
+
+input[required="required"] {
+    position:relative;
+}
+
+input[required="required"]::after {
+    display: block;
+    position:relative;
+    top: 0;
+    left: 10px;
+    height:100px;
+    background-color: blue;
+    content: 'HTML';
+}
+
+input:valid, textarea:valid {
+    border: 2px solid green;
+}
+
+
+input:invalid, textarea:invalid {
+    border: 2px solid red;
+}
+
+input:focus {
+    border: 2px solid lightblue;
+}
+
+textarea {
+    height: 120px;
+}
+
+button[type="submit"] {
+    cursor: pointer;
+    border: 2px solid blue;
+    background-color: lightblue;
+    color: blue;
+    padding: 5px 10px;
+}
+
+button[type="submit"]:hover {
+    cursor: pointer;
+    background-color: lightgreen;
+}
+
+
+/* TODO : ajouter les règles pour le message indiquant que le formulaire est valide. */
+.success {
+    /* votre code ici */
+}
+
+/* TODO : ajouter les règles pour les messages d'erreur */
+.error {
+    /* votre code ici */
+}

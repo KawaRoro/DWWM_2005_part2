@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Liaison de données pour prévisualisation</title>
+        <style>
+            * { box-sizing: border-box; }
+            main {  }
+            textarea { width: 350px; height: 200px; }
+            #wrapper { flex-basis: 60%; }
+            #yourPreview { color: blue; font-size: 18px; font-family: "Comic Sans MS", "Comic Sans", cursive;; }
+        </style>
+        <script src="bidirectional-preview.js" defer></script>
+    </head>
+    <body>
+        <h1>Liaison de données pour prévisualisation</h1>
+        <p>Le texte saisi dans le textarea est intercepté et inséré en direct dans un autre élément mis en forme avec CSS.</p>
+        <main>
+            <textarea id="yourMessage"></textarea>
+            <div id="wrapper">
+                <h2>Prévisualisation de votre message</h2>
+                <article id="yourPreview">
+
+                </article>
+            </div>
+        </main>
+    </body>
+</html>

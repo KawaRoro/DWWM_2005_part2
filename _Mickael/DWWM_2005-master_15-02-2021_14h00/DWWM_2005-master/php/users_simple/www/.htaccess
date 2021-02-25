@@ -1,0 +1,34 @@
+# les fichiers .htaccess sont de petits fichiers de configuration 
+# qui vont vous permettre de personnaliser le comportement du serveur Apache. 
+# cette personnalisation est appliquée pour le répertoire dans lequel se trouve le fichier .htaccess
+# les sous répertoires sont égelement impactés
+# Cela est très utile si vous n'avez pas accès au fichier de configuration principal d'Apache.
+
+
+# activation de l'option de suivi des liens symboliques
+Options +FollowSymLinks 
+
+
+# activation du moteur de réécriture d'url
+RewriteEngine On
+
+
+# 2 conditions de réécriture (RewriteCond) : 
+# Si la requête (REQUEST_FILENAME) ne mène pas vers un dossier existant !-d
+# ET 
+# Si la requête (REQUEST_FILENAME) ne mène pas vers un fichier existant !-f
+# 
+# 
+# Si au moins 1 des 2 conditions renvoie faux :
+#  --- la requête se pousuit normalement
+#
+# Si les 2 conditions renvoient vrai : 
+#  --- on applique la règle de réécriture qui suit les 2 conditions (RewriteRule)
+#
+# La règle de réécriture redirige la requête vers le fichier /users_simple/index.php 
+
+
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ /users_simple/index.php
+

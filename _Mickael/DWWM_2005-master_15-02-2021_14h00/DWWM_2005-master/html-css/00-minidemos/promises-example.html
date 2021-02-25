@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Calculette avec promesses</title>
+        <script src="promises-example.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Calculette avec promesses</h1>
+            <p>Commentaires dans le code du script JS</p>
+            <p>Au click du bouton, le programme va tenter de diviser le nombre <strong>100</strong> par la valeur saisie.</p>
+            <p>Essayez :
+                <ul>
+                    <li>d'entrer un diviseur valide (strictement supérieur à 0)</li>
+                    <li>avec la valeur 0 (qui n'est pas un diviseur valide)</li>
+                </ul>
+            </p>
+        </header>
+
+        <main>
+            <fieldset>
+                <legend>Entrez un diviseur: </legend>
+                <label>Nombre: </label> 
+                <input id="nb" type="number" min="0" max="9999"> 
+                <button id="calc" type="button">Diviser 100 par le nombre saisi (100/x)</button> 
+            </fieldset>
+
+            <h2 id="result">
+                <!-- Si la promesse est résolue, le résultat s'affichera ici. -->
+            </h2>
+        </main>
+    </body>
+</html>

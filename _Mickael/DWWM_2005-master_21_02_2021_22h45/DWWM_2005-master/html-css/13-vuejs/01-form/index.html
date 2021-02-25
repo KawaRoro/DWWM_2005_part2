@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="main.css">
+        <script src="https://unpkg.com/vue@next" defer></script>
+        <script src="main.js" type="module"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Auth</h1>
+        </header>
+        <main id="myApp">
+            <h2>Bienvenue {{ currentUsername }}</h2>
+            <form action="#" id="myForm">
+                <div>
+                    <label for="username">Nom d'utilisateur</label>
+                    <input v-model="username" id="username" name="username" type="text">
+                </div>
+                <div>
+                    <label for="password">Mot de passe</label>
+                    <input v-model="password" id="password" name="password" type="password">
+                </div>
+                <div>
+                    <label for="persist">Se souvenir de moi</label>
+                    <input v-model="persist" id="persist" name="persist" type="checkbox"> {{ persist }}
+                </div>
+                <div>
+                    <label for="human">Êtes vous un humain ?</label>
+                    <span id="human"></span>
+                </div>
+                <div>
+                    <button v-on:click="onLogin" type="button">Connexion</button>
+                </div>
+                <div>
+                    {{ message }}
+                </div>
+            </form>
+            <section v-if="isLogged">
+                <h3>{{ test }}</h3>
+                <button v-on:click="usernameChange">Changer username</button>
+                <div v-for="user in users">
+                    {{ user }}
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

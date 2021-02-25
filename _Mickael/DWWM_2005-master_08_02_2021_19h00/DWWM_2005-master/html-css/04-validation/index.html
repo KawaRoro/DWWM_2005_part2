@@ -1,0 +1,141 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Validation</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <h1 id="titre">Validation</h1>
+
+    <form action="validation.php" method="post" class="myForm" enctype="multipart/form-data">
+
+        <fieldset>
+            <legend id="legend">Types TEXTES</legend>
+
+            <div>
+                <label>Texte</label>
+                <input value="" type="text" id="nom" name="text" placeholder="Votre nom" pattern="^[a-zA-Z]+$" title="ABC" required="true">
+                <span id="validationNom"></span>
+            </div>
+            <div id="passwordContainer">
+                <label>Password</label>
+                <input type="password" name="password" pattern="[a-zA-Z]{8,16}" title=""> 
+                <span class="rouge">afficher/masquer</span> <span>je ne sers à rien</span>
+            </div>
+            <div>
+                <label>Email</label>
+                <input type="email" name="email" required="required">
+            </div>
+            <div>
+                <label>Search</label>
+                <input type="search" name="search">
+            </div>
+            <div>
+                <label>Url</label>
+                <input type="url" name="url" pattern="">
+            </div>
+            <div>
+                <label>Téléphone</label>
+                <input type="tel" name="tel">
+            </div>
+            <div>
+                <label>Textarea</label>
+                <textarea cols="80" rows="10" name="textarea">{{ message }}</textarea>
+            </div>
+        </fieldset>
+        
+
+        <fieldset>
+            <legend>Types NUMÉRIQUES</legend>
+
+            <div>
+                <label>Number</label>
+                <input type="number" name="number">
+            </div>
+            
+            <div>
+                <label>Range</label>
+                <input type="range" name="range" min="20" max="100">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Type DATE</legend>
+
+            <div>
+                <label>Date</label>
+                <input type="date" name="date">
+            </div>
+
+            <div>
+                <label>Mois</label>
+                <input type="month" name="month">
+            </div>
+            
+            <div>
+                <label>Semaine</label>
+                <input type="week" name="week">
+            </div>
+            
+            <div>
+                <label>Heure</label>
+                <input type="time" name="time">
+            </div>
+        </fieldset>
+
+        
+        <fieldset>
+            <legend>Type CHOIX</legend>
+
+            <div>
+                <label>Select</label>
+                <select name="select">
+                    <option value="1">A</option>
+                    <option value="2">B</option>
+                    <option value="3">C</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Select multiple</label>
+                <select name="select_multiple" multiple="true">
+                    <option value="1">A</option>
+                    <option value="2">B</option>
+                    <option value="3">C</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="c1">Case à cocher</label> <input type="checkbox" name="c1" id="c1">
+                <label for="c2">Case à cocher2</label> <input type="checkbox" name="c2" id="c2">
+                <label for="c3">Case à cocher3</label> <input type="checkbox" name="c3" id="c3">
+            </div>
+
+            <div>
+                <label for="r1">Radio</label> <input type="radio" value="1" name="r1" id="r1">
+                <label for="r2">Radio</label> <input type="radio" value="2" name="r1" id="r2">
+                <label for="r3">Radio</label> <input type="radio" value="3" name="r1" id="r3">
+            </div>
+        </fieldset>
+
+        
+        <fieldset>
+            <legend>Type FILE</legend>
+
+            <div>
+                <label>File</label>
+                <input type="file" name="file">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <button type="submit">Valider</button>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

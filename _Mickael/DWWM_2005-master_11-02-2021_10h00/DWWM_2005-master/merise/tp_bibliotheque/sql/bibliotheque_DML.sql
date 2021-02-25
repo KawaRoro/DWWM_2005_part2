@@ -1,0 +1,3 @@
+-- INSERTION DU JEU D'ESSAI DANS LA BASE DE DONNEES db_bibli
+
+USE db_bibli;

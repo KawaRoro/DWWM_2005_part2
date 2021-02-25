@@ -1,0 +1,49 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Formulaire de contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <script src="contact.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Formulaire de contact</h1>
+    </header>
+    
+    <main>
+        <form id="contactForm" action="contact_validation.php" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Laissez-nous un message</legend>
+    
+                <div>
+                    <label>Votre nom :</label>
+                    <input type="text" id="contactName" name="contactName" pattern="[A-Za-z0-9]+" placeholder="Votre nom" title="Votre nom doit respecter le bon format" required="true">
+                </div>
+    
+                <div>
+                    <label>Votre email :</label>
+                    <input type="email" id="contactPassword" name="contactPassword" pattern="[A-Za-z0-9]+" placeholder="exemple@email.com" title="Votre email doit respecter le bon format" required="true"> 
+                </div>
+
+                <div>
+                    <label>Votre numéro de téléphone :</label>
+                    <input type="tel" id="contactPhone" name="contactPhone" pattern="[A-Za-z0-9]+" placeholder="01.02.03.04.05">
+                </div>
+
+                <div>
+                    <label>Votre message :</label>
+                    <textarea id="contactMessage" name="contactMessage" pattern="[A-Za-z0-9]+" placeholder="Votre message..." required="required"></textarea>
+                </div>
+
+                <div>
+                    <button id="contactSubmit" type="submit">Envoyer</button>
+                </div>
+
+                <div id="validationResult" class="error">Merci de compléter le formulaire</div>
+
+            </fieldset>
+        </form>
+    </main>
+    
+</body>
+</html>

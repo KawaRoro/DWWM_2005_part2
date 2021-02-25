@@ -1,0 +1,14 @@
+-- DROP DATABASE ma_base;
+CREATE DATABASE IF NOT EXISTS ma_base;
+
+USE ma_base;
+
+CREATE TABLE IF NOT EXISTS ma_table 
+(
+	mon_id INT PRIMARY KEY AUTO_INCREMENT,
+    mon_nom CHAR(10) NOT NULL,
+    ma_date DATETIME NOT NULL ON UPDATE CURRENT_TIMESTAMP,
+    mon_byte TINYINT(3) NOT NULL,
+    mon_bool TINYINT(1) NOT NULL
+) Engine=InnoDb CHARSET utf8 COLLATE utf8_general_ci;
+

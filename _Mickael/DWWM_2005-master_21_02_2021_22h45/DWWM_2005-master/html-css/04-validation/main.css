@@ -1,0 +1,62 @@
+
+
+fieldset {
+    border-radius: 5px;
+}
+
+div, textarea {
+    padding: 1em;
+}
+
+label {
+    display: inline-block;
+    width: 200px;
+}
+
+.myForm input {
+    width: 200px;
+}
+
+.myForm input[type="checkbox"], 
+.myForm input[type="radio"] {
+    width: auto;
+}
+
+.myForm input[required="required"] {
+    position:relative;
+}
+
+.myForm input[required="required"]::after {
+    display: block;
+    position:relative;
+    top: 0;
+    left: 10px;
+    height:100px;
+    background-color: blue;
+    content: 'HTML';
+}
+
+.myForm input:valid {
+    border: 2px solid green;
+}
+
+
+.myForm input:invalid {
+    border: 2px solid red;
+}
+
+.rouge {
+    background-color: red;
+}
+
+.success {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    font-size: .9em;
+    padding: 2px;
+}

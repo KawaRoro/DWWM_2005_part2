@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script src="https://unpkg.com/vue@next" defer></script>
+        <script src="main.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>{{ title }}</h1>
+        </header>
+        <main id="myApp">
+            {{ name }} {{ message }} {{ result }} 
+            <br>
+            <button v-on:click="sayHello">Say Hello</button> 
+            <button v-on:click="sayGoodBye">Say GoodBye</button>
+            <br>
+            <input v-model="age" type="number" value="18"> 
+            {{ age }}
+            <br>
+            <div v-if="age > 18">Vous êtes majeur !</div>
+            <div v-else-if="age == 18">Vous avez 18 ans !</div>
+            <div v-else>Vous êtes mineur</div>
+            <div v-if="test">test OK</div>
+        </main>
+    </body>
+</html>

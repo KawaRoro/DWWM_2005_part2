@@ -1,0 +1,4 @@
+-- REQUÊTES DES TEST POUR LA BASE DE DONNEES db_bibli
+
+USE db_bibli;
+
